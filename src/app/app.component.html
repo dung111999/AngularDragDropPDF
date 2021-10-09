@@ -1,0 +1,15 @@
+<input (change)="onFileSelected()" type="file" id="file" accept="application/pdf" required />
+<div class="pdf">
+    <pdf-viewer [src]="pdfSrc" [(page)]="page" [rotation]="rotation" [original-size]="originalSize" [fit-to-page]="fitToPage" (after-load-complete)="afterLoadComplete($event)" [zoom]="zoom" [show-all]="showAll" [stick-to-page]="stickToPage" [render-text]="renderText"
+        [external-link-target]="'blank'" [autoresize]="autoresize" (on-progress)="onProgress($event)" [show-borders]="showBorders">
+    </pdf-viewer>
+</div>
+
+<div class="example-box" cdkDrag>
+    Drag me around
+</div>
+
+
+<!--hình ảnh chứa sự kiện để thực hiện drag and drop-->
+<!-- <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
+<!-- <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69"> -->
